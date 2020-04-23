@@ -2,9 +2,20 @@
     margin: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #393e46;
+    height: 100%;
 }
+
+.cont {
+    min-height: 100%;
+    position: relative;
+}
+
 
 .title-container {
     background-color: #222831;
@@ -29,12 +40,15 @@ h5 {
     color: #eeeeee;
     padding-top: 15px;
 }
+.main-container {
+    padding-bottom: 50px;
+}
 
 .dec-card {
     background-color: #222831;
     box-shadow: 5px 5px 3px #222222;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 20px 0 40px 0;
     text-align:  center;
 }
 
@@ -47,6 +61,34 @@ h5 {
     margin: 20px auto;
 }
 
-.footer-container {
-    
+p {
+    color: #eeeeee;
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+    color: #808080;
+    padding-top: 10px;
 }
+
+a {
+    color: #808080;
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    background-color: #222831;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    clear: both;
+}
+
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+    /* thank you Erik J - negate effect of float*/
+  }
