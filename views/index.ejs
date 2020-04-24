@@ -25,67 +25,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="dec-card">
-                        <h5 class="dec-title">Eintala</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="nefnifall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þolfall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þágufall">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="eignarfall">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="dec-card">
-                        <h5 class="dec-title">Fleirtala</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="nefnifall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þolfall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þágufall">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="eignarfall">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="dec-card">
-                        <h5 class="dec-title">Eintala m. greini</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="nefnifall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þolfall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þágufall">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="eignarfall">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="dec-card">
-                        <h5 class="dec-title">Fleirtala m. greini</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="nefnifall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þolfall">
-                                <input class="form-control form-control-lg dec-form" type="text" placeholder="þágufall">
-                                <input class="form-control form-control-lg dec-form" type="text"
-                                    placeholder="eignarfall">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="row justify-content-center">
+                <% if (ordData.et.length !== 0) { %> <%- include("partials/et"); -%> <% } %>
+                <% if (ordData.etgr.length !== 0) { %> <%- include("partials/etgr"); -%> <% } %>
+                <% if (ordData.ft.length !== 0) { %> <%- include("partials/ft"); -%> <% } %>
+                <% if (ordData.ftgr.length !== 0) { %> <%- include("partials/ftgr"); -%> <% } %>
             </div>
             <div class="row justify-content-center">
                 <div class="col-2">
@@ -105,6 +49,7 @@
             </div>
         </footer>
     </div>
+    <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

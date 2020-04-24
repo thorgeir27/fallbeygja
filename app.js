@@ -19,10 +19,7 @@ app.get("/", function(req, res) {
     https.get(query, function(response) {
         response.on("data", function(data) {
             const pData = JSON.parse(data);
-            const ordData = {ord: pData[0].ord};
-            pData[0].bmyndir.forEach(bMynd => {
-                ordData[bMynd.g] = bMynd.b;
-            });
+            ordData = parseData(pData);
             res.render("index", {ordData: ordData});
         });
     });
@@ -46,10 +43,26 @@ app.listen(3000, function () {
 
 
 function parseData(data) {
-    const newData = {ord: data[0].ord};
+    const newData = {
+        ord: data[0].ord,
+        et: [],
+        etgr: [],
+        ft: [],
+        ftgr: []
+    };
     
     data[0].bmyndir.forEach(bMynd => {
-        newData[bMynd.g] = bMynd.b;
-    });
+        const form = bMynd.g;
 
+        if (form.includes("ETgr")) {
+            newData.etgr.push(bMynd.b);
+        } else if (form.includes("ET")) {
+            newData.et.push(bMynd.b);
+        } else if (form.includes("FTgr")) {
+            newData.ftgr.push(bMynd.b);
+        } else if (form.includes("FT")) {
+            newData.ft.push(bMynd.b);
+        }
+    });
+    return newData;
 }
