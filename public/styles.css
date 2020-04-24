@@ -48,7 +48,7 @@ h5 {
     background-color: #222831;
     box-shadow: 5px 5px 3px #222222;
     border-radius: 10px;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 20px 0;
     text-align:  center;
 }
 
@@ -73,6 +73,16 @@ p {
 a {
     color: #808080;
     text-decoration: underline;
+}
+
+.fas {
+    color: #eeeeee;
+    font-size: 2rem;
+}
+
+button {
+    width: 100%;
+    border: none;
 }
 
 .footer {
